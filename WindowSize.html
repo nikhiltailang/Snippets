@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Show dynamically updating window size</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+
+	<!-- SNIPPET STARTS HERE -->
+	<!-- This snippet shows a box with the window size on the top right. Size updates on resizing. Requires jQuery. -->
+	<div id="windowsize" style="position: fixed; z-index: 9; background: rgba(0, 0, 0, 0.6); color: #fff; padding: 3px; top: 0; right: 0;"></div>
+	<script type="text/javascript">
+	  $(document).ready(function () {
+	    $("#windowsize").html($(window).width());
+	    $(window).resize(function (){    
+	      $("#windowsize").html($(window).width());  
+	    });
+	  });
+	</script>
+	<!-- SNIPPET ENDS HERE -->
+
+</body>
+</html>
